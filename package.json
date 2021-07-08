@@ -1,0 +1,38 @@
+{
+  "name": "@lychees/matataki-token-list",
+  "version": "1.2.0",
+  "description": "◦ The Unisave Matataki token list",
+  "main": "build/uniscam-matataki.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir build && node src/write.js > build/unisave-matataki.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/unisave-matataki.tokenlist.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uniscam/matataki-token-list.git"
+  },
+  "keywords": [
+    "uniswap",
+    "matataki",
+    "token",
+    "list"
+  ],
+  "author": "KodamaSakuno",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Uniscam/matataki-token-list/issues"
+  },
+  "homepage": "https://github.com/Uniscam/matataki-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@uniswap/token-lists": "^1.0.0-beta.8",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}
